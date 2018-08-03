@@ -1,0 +1,12 @@
+variable "node_public_ip_name" {}
+variable "node_resource_group_location" {}
+variable "node_resource_group_name" {}
+variable "node_public_ip_nic_name" {}
+variable "node_subnet_id" {}
+variable "node_nsg_name" {}
+variable "node_selenium_node_port" {}
+variable "node_vm_name" {}
+variable "nodevmusername" {}
+variable "nodevmpassword" {}
+variable "node_number_of_nodes" {}
+variable "selenium_hub_url" {}

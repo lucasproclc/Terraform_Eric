@@ -1,0 +1,41 @@
+Installing Terraform
+---> sudo apt-get install unzip
+---> wget https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip
+---> unzip terraform_0.11.7_linux_amd64.zip
+---> sudo mv terraform /usr/local/bin/
+---> terraform --version
+
+Installing AWS cli
+---> sudo apt-get update && sudo apt-get -y upgrade
+---> sudo apt-get install python-pip
+---> pip -V
+---> pip install awscli --upgrade --user
+---> aws --version
+
+Installing Azure CLI 
+---> AZ_REPO=$(lsb_release -cs)
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | \
+    sudo tee /etc/apt/sources.list.d/azure-cli.list
+---> curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+--->sudo apt-get install apt-transport-https
+---> sudo apt-get update && sudo apt-get install azure-cli
+
+
+Using Terraform with aws
+aws configure
+provider "aws" {
+  region     = "${var.region}"
+}
+
+or 
+you can use them as variables within terraform
+
+
+Using Terraform with azure
+
+az login
+provider "azurerm" {
+}
+
+or 
+you can use them as variables within terraform

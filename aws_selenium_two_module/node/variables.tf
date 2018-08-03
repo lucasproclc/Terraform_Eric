@@ -1,0 +1,9 @@
+variable "node_number_of_nodes" {}
+variable "node_vpc_id" {}
+variable "node_selenium_node_port" {}
+variable "node_selenium_node_instance_type" {}
+variable "node_image_id" {}
+variable "node_key_name" {}
+variable "node_private_key_path" {}
+variable "selenium_hub_url" {}
+variable "node_subnet_id" {}
